@@ -1,7 +1,5 @@
 ﻿using System;
-using lib;
-using lib2;
-using ScottPlot;
+using ExperimentProcessingLib;
 
 namespace console_app
 {
@@ -9,10 +7,12 @@ namespace console_app
     {
         static void Main(string[] args)
         {
-            Class1 c = new();
-            Class2 c2 = new();
-            Class3 c3 = new();
-            Console.WriteLine("Hello World!");
+            Cube c = new(a: 1, b: 2, l: 3);
+            Console.WriteLine(c);
+            Cilinder s = new(d: 5, l: 2);
+            Console.WriteLine(s);
+            Sample smp = new(Figures.Cube, dimensions: new double[] { 1.0, 1.0, 5.0 });
+            System.Console.WriteLine(smp.SampleType);
         }
     }
 }
